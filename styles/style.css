@@ -1,0 +1,234 @@
+/* Variables de fuentes y colores */
+:root {
+    /* Fondos */
+    --color-primario-1: #03318c;
+    --color-primario-2: #5D04D9;
+    --color-primario-3: #9303A6;
+    --color-primario-4: #C004D9;
+    --color-primario-5: #8C0375;
+    --color-fondo-main: #FFFFFF;
+    --color-borde-input: #03318C;
+
+    /* Colores de fuente */
+    --color-1-titulos: #E5E5E5;
+    --color-2-titulos: #000000;
+
+    /* fuentes */
+    --fuente-titulos: "Press Start 2P", system-ui;
+    --fuente-nombre-productos: IBM Plex Mono;
+
+}
+
+
+/* Header */
+
+header {
+    background: var(--color-primario-1);
+    height: 90px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container span {
+    text-align: center;
+}
+
+.img-header {
+    width: 120px;
+    height: 30px;
+
+}
+
+.title {
+    font-family: var(--fuente-titulos);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-1-titulos);
+}
+
+/* Main-styles */
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background: var(--color-fondo-main);
+}
+
+/* Seccion mis productos */
+.my-product {
+    width: 65%;
+    padding-top: 8%;
+
+}
+
+.title-main {
+    color: var(--color-2-titulos);
+    text-align: center;
+    font-family: var(--fuente-titulos);
+
+}
+
+.content-product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.content-product li {
+    margin-bottom: 10px;
+}
+
+.product {
+    background: var(--color-primario-2);
+    border: 3px solid var(--color-2-titulos);
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.product-img-content {
+    width: 160px;
+    height: 160px;
+    border: 3px solid var(--color-2-titulos);
+    border-radius: 5px;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+}
+
+.product-name {
+    font-family: var(--fuente-nombre-productos);
+    color: var(--color-fondo-main);
+    padding: 10px 0;
+}
+
+.product-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-price span {
+    color: var(--color-fondo-main);
+    font-family: var(--fuente-nombre-productos);
+    font-weight: bold;
+}
+
+/* Seccion agregar producto */
+
+.add-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-add-product {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form-add-product input {
+    width: 300px;
+    height: 40px;
+    gap: 0px;
+    border: 3px solid var(--color-borde-input);
+    border-radius: 40px;
+    padding-left: 10px;
+    font-family: var(--fuente-nombre-productos);
+    color: var(--color-borde-input);
+    font-weight: bold;
+}
+
+.add-botton-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.add-botton {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+
+}
+
+.enviar {
+    background: var(--color-borde-input);
+    color: var(--color-fondo-main);
+    font-family: var(--fuente-nombre-productos);
+    border: none;
+    font-weight: bold;
+}
+
+
+.limpiar {
+    border: 3px solid var(--color-borde-input);
+    background: var(--color-fondo-main);
+    color: var(--color-borde-input);
+    font-family: var(--fuente-nombre-productos);
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primario-1);
+    margin-top: 10%;
+}
+
+.title-container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.title-content span {
+    font-size: 15px;
+}
+
+.credit-footer {
+    font-size: 12px;
+    color: var(--color-fondo-main);
+    text-align: center;
+    font-family: var(--fuente-nombre-productos);
+    padding: 10px;
+    opacity: 0.9;
+}
+
+.credit-footer-alura {
+    font-size: 12px;
+    color: var(--color-fondo-main);
+    text-align: center;
+    font-family: var(--fuente-nombre-productos);
+    padding-bottom: 30px;
+    opacity: 0.5;
+}

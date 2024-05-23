@@ -5,17 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AluraGeek</title>
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <header>
 
-        <div class="header-container">
-            <h1 class="title">
-                AluraGeek
-            </h1>
+        <div class="title-container">
+
+            <img src="./img/Img logo.png" alt="Logo-Corazones" class="img-header">
+            <span class="title">AluraGeek</span>
+
         </div>
 
     </header>
@@ -24,38 +34,117 @@
 
         <section class="my-product">
 
-            <ul>
+            <div class="title-container">
+                <span class="title title-main">MIS PRODUCTOS:</span>
+            </div>
+
+            <ul class="content-product">
                 <li class="product">
 
-                    <img src="" alt="">
+                    <div class="product-img-content">
+                        <img src="./img/Bocinas.jpg" alt="Bocinas" class="product-img">
+                    </div>
+
                     <h2 class="product-name">
-
+                        Bocinas
                     </h2>
-                    <span class="product-price">
 
-                    </span>
+                    <div class="product-price">
+                        <span>
+                            $ 60,00
+                        </span>
+                        <img src="./img/Vector.png" alt="">
+                    </div>
 
                 </li>
                 <li class="product">
 
-                    <img src="" alt="">
+                    <div class="product-img-content">
+                        <img src="./img/airdpods.jpg" alt="AirdPods" class="product-img">
+                    </div>
+
                     <h2 class="product-name">
-
+                        AirdPods
                     </h2>
-                    <span class="product-price">
 
-                    </span>
+                    <div class="product-price">
+                        <span>
+                            $ 60,00
+                        </span>
+                        <img src="./img/Vector.png" alt="">
+                    </div>
 
                 </li>
                 <li class="product">
 
-                    <img src="" alt="">
+                    <div class="product-img-content">
+                        <img src="./img/Auricular.jpg" alt="Auricular" class="product-img">
+                    </div>
+
                     <h2 class="product-name">
-
+                        Auricular
                     </h2>
-                    <span class="product-price">
 
-                    </span>
+                    <div class="product-price">
+                        <span>
+                            $ 60,00
+                        </span>
+                        <img src="./img/Vector.png" alt="">
+                    </div>
+
+                </li>
+                <li class="product">
+
+                    <div class="product-img-content">
+                        <img src="./img/Bocinas.jpg" alt="Bocinas" class="product-img">
+                    </div>
+
+                    <h2 class="product-name">
+                        Bocinas
+                    </h2>
+
+                    <div class="product-price">
+                        <span>
+                            $ 60,00
+                        </span>
+                        <img src="./img/Vector.png" alt="">
+                    </div>
+
+                </li>
+                <li class="product">
+
+                    <div class="product-img-content">
+                        <img src="./img/airdpods.jpg" alt="AirdPods" class="product-img">
+                    </div>
+
+                    <h2 class="product-name">
+                        AirdPods
+                    </h2>
+
+                    <div class="product-price">
+                        <span>
+                            $ 60,00
+                        </span>
+                        <img src="./img/Vector.png" alt="">
+                    </div>
+
+                </li>
+                <li class="product">
+
+                    <div class="product-img-content">
+                        <img src="./img/Auricular.jpg" alt="Auricular" class="product-img">
+                    </div>
+
+                    <h2 class="product-name">
+                        Auricular
+                    </h2>
+
+                    <div class="product-price">
+                        <span>
+                            $ 60,00
+                        </span>
+                        <img src="./img/Vector.png" alt="">
+                    </div>
 
                 </li>
             </ul>
@@ -64,12 +153,21 @@
 
         <section class="add-product">
 
-            <form action="">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <button>Enviar</button>
-                <button>Limpiar</button>
+            <div class="title-container">
+                <span class="title title-main">
+                    AGREGAR PRODUCTO:
+                </span>
+            </div>
+
+            <form action="" class="form-add-product">
+                <input type="text" placeholder="nombre...">
+                <input type="text" placeholder="precio...">
+                <input type="text" placeholder="imagen...">
+
+                <div class="add-botton-container">
+                    <button class="add-botton enviar">Enviar</button>
+                    <button class="add-botton limpiar">Limpiar</button>
+                </div>
             </form>
 
         </section>
@@ -78,6 +176,21 @@
 
     <footer>
 
+        <div class="title-container-footer">
+            <div class="title-content">
+                <img src="./img/Img logo.png" alt="Logo-Corazones" class="img-header">
+                <span class="title">AluraGeek</span>
+            </div>
+
+        </div>
+        <div class="title-container-footer">
+            <span class="credit-footer">
+                DESARROLLADO POR RONI ESTEBAN FRIAS
+            </span>
+            <span class="credit-footer-alura">
+                ALURA LATAM - 2024
+            </span>
+        </div>
 
     </footer>
 
