@@ -15,6 +15,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap"
         rel="stylesheet">
+    <script src="./js/mostrar-productos.js" type="module" defer></script>
+    <script src="./js/enviar-producto.js" type="module" defer></script>
 </head>
 
 <body>
@@ -38,116 +40,7 @@
                 <span class="title title-main">MIS PRODUCTOS:</span>
             </div>
 
-            <ul class="content-product">
-                <li class="product">
-
-                    <div class="product-img-content">
-                        <img src="./img/Bocinas.jpg" alt="Bocinas" class="product-img">
-                    </div>
-
-                    <h2 class="product-name">
-                        Bocinas
-                    </h2>
-
-                    <div class="product-price">
-                        <span>
-                            $ 60,00
-                        </span>
-                        <img src="./img/Vector.png" alt="">
-                    </div>
-
-                </li>
-                <li class="product">
-
-                    <div class="product-img-content">
-                        <img src="./img/airdpods.jpg" alt="AirdPods" class="product-img">
-                    </div>
-
-                    <h2 class="product-name">
-                        AirdPods
-                    </h2>
-
-                    <div class="product-price">
-                        <span>
-                            $ 60,00
-                        </span>
-                        <img src="./img/Vector.png" alt="">
-                    </div>
-
-                </li>
-                <li class="product">
-
-                    <div class="product-img-content">
-                        <img src="./img/Auricular.jpg" alt="Auricular" class="product-img">
-                    </div>
-
-                    <h2 class="product-name">
-                        Auricular
-                    </h2>
-
-                    <div class="product-price">
-                        <span>
-                            $ 60,00
-                        </span>
-                        <img src="./img/Vector.png" alt="">
-                    </div>
-
-                </li>
-                <li class="product">
-
-                    <div class="product-img-content">
-                        <img src="./img/Bocinas.jpg" alt="Bocinas" class="product-img">
-                    </div>
-
-                    <h2 class="product-name">
-                        Bocinas
-                    </h2>
-
-                    <div class="product-price">
-                        <span>
-                            $ 60,00
-                        </span>
-                        <img src="./img/Vector.png" alt="">
-                    </div>
-
-                </li>
-                <li class="product">
-
-                    <div class="product-img-content">
-                        <img src="./img/airdpods.jpg" alt="AirdPods" class="product-img">
-                    </div>
-
-                    <h2 class="product-name">
-                        AirdPods
-                    </h2>
-
-                    <div class="product-price">
-                        <span>
-                            $ 60,00
-                        </span>
-                        <img src="./img/Vector.png" alt="">
-                    </div>
-
-                </li>
-                <li class="product">
-
-                    <div class="product-img-content">
-                        <img src="./img/Auricular.jpg" alt="Auricular" class="product-img">
-                    </div>
-
-                    <h2 class="product-name">
-                        Auricular
-                    </h2>
-
-                    <div class="product-price">
-                        <span>
-                            $ 60,00
-                        </span>
-                        <img src="./img/Vector.png" alt="">
-                    </div>
-
-                </li>
-            </ul>
+            <ul class="content-product" data-lista></ul>
 
         </section>
 
@@ -159,14 +52,14 @@
                 </span>
             </div>
 
-            <form action="" class="form-add-product">
-                <input type="text" placeholder="nombre...">
-                <input type="text" placeholder="precio...">
-                <input type="text" placeholder="imagen...">
+            <form action="" class="form-add-product" data-form>
+                <input type="text" placeholder="nombre..." minlength="2" name="nombre" required data-nombre>
+                <input type="text" placeholder="precio..." name="precio" required data-precio>
+                <input type="text" placeholder="imagen..." name="imagen" required data-imagen>
 
                 <div class="add-botton-container">
-                    <button class="add-botton enviar">Enviar</button>
-                    <button class="add-botton limpiar">Limpiar</button>
+                    <button class="add-botton enviar" type="submit" data-enviar>Enviar</button>
+                    <button class="add-botton limpiar" type="reset">Limpiar</button>
                 </div>
             </form>
 

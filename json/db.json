@@ -1,0 +1,28 @@
+{
+  "Productos": [
+    {
+      "id": "1",
+      "imagen": "https://monsterlaptops.com.do/wp-content/uploads/bocinas-para-computadora-klip-xtreme-6.jpg",
+      "nombre": "Bocinas",
+      "precio": "60"
+    },
+    {
+      "id": "016e",
+      "imagen": "",
+      "nombre": "",
+      "precio": ""
+    },
+    {
+      "id": "f90c",
+      "imagen": "https://imagenes.eltiempo.com/files/image_1200_600/uploads/2023/01/05/63b73981e5a99.jpeg",
+      "nombre": "Perrito",
+      "precio": "70"
+    },
+    {
+      "id": "b22c",
+      "imagen": "https://imagenes.eltiempo.com/files/image_1200_600/uploads/2023/01/05/63b73981e5a99.jpeg",
+      "nombre": "Perrito",
+      "precio": "70"
+    }
+  ]
+}
