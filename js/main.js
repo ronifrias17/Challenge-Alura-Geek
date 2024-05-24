@@ -7,7 +7,7 @@ async function listarProductos() {
 }
 
 
-async function sendProduct(imagen, nombre, precio) {
+async function sendProduct(imagen, nombre, precio, id) {
     const conectionAPI = await fetch("http://localhost:3001/Productos", {
         method: "POST",
         headers: { "Content-type": "application/json" },
@@ -15,6 +15,7 @@ async function sendProduct(imagen, nombre, precio) {
             imagen: imagen,
             nombre: nombre,
             precio: precio,
+            id: id
 
         })
 
@@ -30,21 +31,27 @@ async function sendProduct(imagen, nombre, precio) {
 
 }
 
-async function deleteProduct(id) {
-    const response = await fetch(`http://localhost:3001/Productos/${id}`, {
-        method: "DELETE",
-        headers: { "Content-type": "application/json" }
-    });
 
-    if (!response.ok) {
-        throw new Error("Ha ocurrido un error al borrar el producto");
+async function borrarProducto(idProducto) {
+    try {
+        const conectionAPI = await fetch(`http://localhost:3001/Productos/${idProducto}`, {
+            method: "DELETE",
+            headers: { "Content-type": "application/json" },
+        });
+
+        if (!conectionAPI.ok) {
+            throw new Error("Ha ocurrido un error al eliminar el producto");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        
     }
-
-    return await response.json();
 }
 
+
+
 export const APIConection = {
-    listarProductos, sendProduct, deleteProduct
+    listarProductos, sendProduct, borrarProducto
 }
 
 
