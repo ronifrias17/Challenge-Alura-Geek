@@ -1,5 +1,5 @@
 async function listarProductos() {
-    const conection = await fetch("http://localhost:3001/Productos");
+    const conection = await fetch("https://challenge-alura-geek-jedy4218s.vercel.app/api/posts");
 
     const convertConection = conection.json();
 
@@ -8,7 +8,7 @@ async function listarProductos() {
 
 
 async function sendProduct(imagen, nombre, precio, id) {
-    const conectionAPI = await fetch("http://localhost:3001/Productos", {
+    const conectionAPI = await fetch("https://challenge-alura-geek-jedy4218s.vercel.app/api/posts", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({
@@ -34,7 +34,7 @@ async function sendProduct(imagen, nombre, precio, id) {
 
 async function borrarProducto(idProducto) {
     try {
-        const conectionAPI = await fetch(`http://localhost:3001/Productos/${idProducto}`, {
+        const conectionAPI = await fetch(`https://challenge-alura-geek-jedy4218s.vercel.app/api/posts/${idProducto}`, {
             method: "DELETE",
             headers: { "Content-type": "application/json" },
         });
@@ -44,7 +44,7 @@ async function borrarProducto(idProducto) {
         }
     } catch (error) {
         console.error("Error:", error);
-        
+
     }
 }
 
