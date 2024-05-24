@@ -1,0 +1,10 @@
+{
+    "name": "Challenge-Alura-Geek",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node api/server.js"
+    },
+    "dependencies": {
+        "json-server": "^0.16.3"
+    }
+}
