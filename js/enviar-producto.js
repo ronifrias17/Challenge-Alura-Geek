@@ -2,8 +2,8 @@ import { APIConection } from "./main.js";
 
 const enviar = document.querySelector("[data-enviar]");
 
-async function sendProduct(_event_) {
-    _event_.preventDefault();
+async function sendProduct(event) {
+    event.preventDefault();
     const imagen = document.querySelector("[data-imagen]").value;
     const nombre = document.querySelector("[data-nombre]").value;
     const precio = document.querySelector("[data-precio]").value;
@@ -15,4 +15,4 @@ async function sendProduct(_event_) {
     }
 }
 
-enviar.addEventListener("click", _event_ => sendProduct(_event_));
+enviar.addEventListener("click", event => sendProduct(event));

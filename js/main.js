@@ -4,30 +4,30 @@ async function listarProductos() {
     return convertConection;
 }
 
-async function sendProduct(_imagen_, _nombre_, _precio_, _id_) {
+async function sendProduct(imagen, nombre, precio, id) {
     const conectionAPI = await fetch("https://fake-api-ten-azure.vercel.app/Productos", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({
-            imagen: _imagen_,
-            nombre: _nombre_,
-            precio: _precio_,
-            id: _id_
+            imagen: imagen,
+            nombre: nombre,
+            precio: precio,
+            id: id
         })
     });
 
     const convertConection = await conectionAPI.json(); // Esperar a que se resuelva la promesa
 
     if (!conectionAPI.ok) {
-        throw new Error("Ha ocurrido un error la enviar el video");
+        throw new Error("Ha ocurrido un error la enviar el producto");
     }
 
     return convertConection;
 }
 
-async function borrarProducto(_idProducto_) {
+async function borrarProducto(idProducto) {
     try {
-        const conectionAPI = await fetch(`https://fake-api-ten-azure.vercel.app/Productos/${_idProducto_}`, {
+        const conectionAPI = await fetch(`https://fake-api-ten-azure.vercel.app/Productos/${idProducto}`, {
             method: "DELETE",
             headers: { "Content-type": "application/json" },
         });
@@ -35,12 +35,11 @@ async function borrarProducto(_idProducto_) {
         if (!conectionAPI.ok) {
             throw new Error("Ha ocurrido un error al eliminar el producto");
         }
-        // No lanzar un error si la operación es exitosa
+
     } catch (error) {
-        throw error; // Lanzar el error en lugar de solo imprimirlo
+        throw error;
     }
+
 }
 
-export const APIConection = {
-    listarProductos, sendProduct, borrarProducto
-}
+export const APIConection = { listarProductos, sendProduct, borrarProducto }
