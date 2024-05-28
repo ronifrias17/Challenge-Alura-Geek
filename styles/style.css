@@ -156,7 +156,7 @@ main {
 .form-add-product {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    /* gap: 40px; */
 
 }
 
@@ -170,6 +170,29 @@ main {
     font-family: var(--fuente-nombre-productos);
     color: var(--color-borde-input);
     font-weight: bold;
+
+}
+
+/* Para navegadores Webkit (Chrome, Safari, Edge) */
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Para Firefox */
+.input-number[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.error-message {
+    font-family: var(--fuente-nombre-productos);
+    font-size: small;
+    color: red;
+    font-style: italic;
+    width: 80%;
+    padding: 2px 0 40px 10px;
+
 }
 
 .add-botton-container {

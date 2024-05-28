@@ -17,6 +17,7 @@
         rel="stylesheet">
     <script src="./js/mostrar-productos.js" type="module" defer></script>
     <script src="./js/enviar-producto.js" type="module" defer></script>
+    <script src="./js/validaciones.js" type="module" defer></script>
 </head>
 
 <body>
@@ -53,15 +54,22 @@
             </div>
 
             <form action="" class="form-add-product" data-form>
-                <input type="text" placeholder="nombre..." minlength="2" name="nombre" required data-nombre>
-                <input type="number" placeholder="precio..." minlength="2" name="precio" required data-precio>
-                <input type="text" placeholder="imagen..." name="imagen" required data-imagen>
+                <input type="text" placeholder="nombre..." minlength="2" name="nombre" data-nombre required>
+                <span class="error-message" id="error-nombre"></span>
+
+                <input type="number" placeholder="precio..." minlength="2" name="precio" data-precio
+                    class="input-number" required>
+                <span class="error-message" id="error-precio"></span>
+
+                <input type="text" placeholder="imagen..." name="imagen" data-imagen required>
+                <span class="error-message" id="error-imagen"></span>
 
                 <div class="add-botton-container">
                     <button class="add-botton enviar" type="submit" data-enviar>Enviar</button>
                     <button class="add-botton limpiar" type="reset">Limpiar</button>
                 </div>
             </form>
+
 
         </section>
 
